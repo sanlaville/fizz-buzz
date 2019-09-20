@@ -20,8 +20,8 @@ class EnvTest {
 
     @ParameterizedTest
     @CsvSource("1, a1", "2, a2")
-    fun `parameterized test is working`(num: Int, exp: String) {
-        val value = "a$num"
-        assertThat(value).isEqualTo(exp)
+    fun `parameterized test is working`(numberInput: Int, expected: String) {
+        val actual = "a$numberInput"
+        assertThat(actual).isEqualTo(expected)
     }
 }
