@@ -6,4 +6,19 @@ describe('Check test environment', function () {
         expect(1).toEqual(0);
     });
 
+    describe('parameterized test example', function() {
+
+        let tests = [[1, "a1"], [2, "a2"]]
+
+        tests.forEach(test => {
+            let numberInput = test[0];
+            let expected = test[1];
+
+            it(numberInput + ' should be converted to ' + expected, function () {
+                let actual = "a" + numberInput
+                expect(actual).toEqual(expected);
+            })
+        });
+
+    });
 });
