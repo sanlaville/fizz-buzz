@@ -1,17 +1,27 @@
 package com.orange.dojo.fizzbuzz;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.Test;
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
+@DisplayName("Check my environment")
 public class EnvTest {
 
   @Test
-  public void test_environment_is_working() {
-    // Given
+  @DisplayName("My environment is ready to fail and pass...")
+  public void check_environment() {
+    Assertions.assertThat(false).isTrue();
+  }
 
-    // When
-
-    // Then
-    assertThat(false).isTrue();
+  @ParameterizedTest
+  @CsvSource({
+    "false, true",
+    "true, false"
+  })
+  @DisplayName("My environment is ready to fail and pass with a parameterized test")
+  public void check_environment(boolean actuel, boolean expected) {
+    Assertions.assertThat(actuel).isEqualTo(expected);
   }
 }
