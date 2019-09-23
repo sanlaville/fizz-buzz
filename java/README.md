@@ -1,8 +1,5 @@
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-# Fizz Buzz Kata
-...
-
 # Build
 - ```./mvnw clean install``` if you haven't already installed maven 3
 - ```mvn clean install``` if you have maven 3 installed
