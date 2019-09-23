@@ -4,6 +4,7 @@ target/
 #gradle
 build/
 .gradle/
+kotlin/out
 
 # Eclipse/IntelliJ configuration files/directories
 .metadata/
