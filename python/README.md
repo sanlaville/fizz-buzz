@@ -15,6 +15,7 @@ Essayer cette approche :
 from parameterized import parameterized
 
 class TestSequence(unittest.TestCase):
+
     @parameterized.expand([
         ["foo", "a", "a",],
         ["bar", "a", "b"],
